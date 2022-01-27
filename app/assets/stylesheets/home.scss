@@ -1,0 +1,80 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+table {
+  border-bottom: solid 1px #5ba546;
+  border-spacing:0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+table table {
+  border-bottom: none;
+}
+
+tr {
+  border-collapse: collapse;
+}
+
+tr.rowOdd {
+  background: #deedda;
+}
+
+tr.rowEven {
+  background: #fff;
+}
+
+th {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: capitalize;
+  color: #fff;
+  background: #5ba546;
+}
+
+td,
+th {
+  padding: 5px 8px;
+  text-align: left;
+  line-height: 1.5;
+  vertical-align: top;
+  border-left: solid 1px #fff;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+}
+
+td:empty:before,
+td.empty:before {
+  content: "_";
+}
+
+.lesser,
+.lesser a {
+  color: #999;
+}
+
+td {
+  overflow: hidden;
+}
+
+th.hidden,
+td.hidden {
+  display: none;
+}
+
+/* example column styling */
+/* :nth-child or :last-child not supported in IE8 */
+
+th:first-child,
+td:first-child {
+  width:30px;
+}
+
+th:first-child + th + th + th,
+td:first-child + td + td + td {
+  text-align:right;
+}

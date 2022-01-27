@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <th>Id</th>
+    <th>title</th>
+    <th>url</th>
+    <th>Average Revenue</th>
+  </thead>
+  <tbody>
+    <% data = [] %>
+    <% @sites.each do |site| %>
+    <tr>
+      <td><%= site.id %></td>
+      <td><%= site.title %></td>
+      <td><%= site.url %></td>
+      <td><%= site.get_average_revenue %></td>
+      <% data.push({title: site.title, data: site.get_deal_list }) %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<canvas id="myChart" width="400" height="400"></canvas>
+<%= content_tag(:div, "", id: "sites_data", 'data-sites-attr': data.to_json) %>
